@@ -3,7 +3,7 @@
 export default $config({
 	app(input) {
 		return {
-			name: 'create-bernard-app',
+			name: 'benny-gallery-svelte',
 			removal: input?.stage === 'production' ? 'retain' : 'remove',
 			home: 'aws'
 		};
