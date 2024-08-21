@@ -25,7 +25,7 @@ importers:
         version: 12.1.0
       sst:
         specifier: ion
-        version: 0.1.94
+        version: 0.1.94(valibot@0.30.0)
       svelte-kit-sst:
         specifier: 2.43.4
         version: 2.43.4
@@ -35,6 +35,9 @@ importers:
       tailwind-variants:
         specifier: ^0.2.1
         version: 0.2.1(tailwindcss@3.4.9)
+      valibot:
+        specifier: ^0.30.0
+        version: 0.30.0
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -2568,6 +2571,9 @@ packages:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
 
+  valibot@0.30.0:
+    resolution: {integrity: sha512-5POBdbSkM+3nvJ6ZlyQHsggisfRtyT4tVTo1EIIShs6qCdXJnyWU5TJ68vr8iTg5zpOLjXLRiBqNx+9zwZz/rA==}
+
   vite-node@2.0.5:
     resolution: {integrity: sha512-LdsW4pxj0Ot69FAoXZ1yTnA9bjGohr2yNBU7QKRxpz8ITSkhuDl6h3zS/tvgz4qrNjeRnvrWeXQ8ZF7Um4W00Q==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -5037,7 +5043,7 @@ snapshots:
   sst-linux-x86@0.1.94:
     optional: true
 
-  sst@0.1.94:
+  sst@0.1.94(valibot@0.30.0):
     dependencies:
       '@aws-sdk/client-lambda': 3.478.0
       aws4fetch: 1.0.19
@@ -5049,6 +5055,7 @@ snapshots:
       sst-linux-arm64: 0.1.94
       sst-linux-x64: 0.1.94
       sst-linux-x86: 0.1.94
+      valibot: 0.30.0
     transitivePeerDependencies:
       - aws-crt
 
@@ -5275,6 +5282,8 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   uuid@9.0.1: {}
+
+  valibot@0.30.0: {}
 
   vite-node@2.0.5(@types/node@22.2.0):
     dependencies:

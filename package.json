@@ -50,6 +50,7 @@
 		"svelte-kit-sst": "2.43.4",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1",
+		"valibot": "^0.30.0",
 		"zod": "^3.23.8"
 	}
 }
