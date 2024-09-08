@@ -1,11 +1,9 @@
-<script>
+<script lang="ts">
 	import '../app.css';
+	import { Toaster } from '$lib/components/ui/sonner';
 </script>
 
-<nav class="absolute top-0 left-0">
-	<a href="/" class="text-blue-500 hover:text-blue-700">Home</a>
-</nav>
-
+<Toaster />
 <main class="max-w-3xl mx-auto min-h-screen flex items-center">
 	<slot />
 </main>

@@ -3,15 +3,9 @@
 import "sst"
 declare module "sst" {
   export interface Resource {
-    "Bus": {
-      "arn": string
+    "BennyBucket": {
       "name": string
-      "type": "sst.aws.Bus"
-    }
-    "Fn": {
-      "name": string
-      "type": "sst.aws.Function"
-      "url": string
+      "type": "sst.aws.Bucket"
     }
     "Web": {
       "type": "sst.aws.SvelteKit"

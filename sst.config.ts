@@ -10,18 +10,12 @@ export default $config({
 		};
 	},
 	async run() {
-		new sst.aws.SvelteKit('Web');
-		const bus = new sst.aws.Bus('Bus');
-
-		const fn = new sst.aws.Function('Fn', {
-			handler: './server/index.handler',
-			url: true,
-			link: [bus]
+		const bucket = new sst.aws.Bucket('BennyBucket', {
+			public: true
 		});
-		bus.subscribe('./server/receiver.handler');
 
-		return {
-			url: fn.url
-		};
+		new sst.aws.SvelteKit('Web', {
+			link: [bucket]
+		});
 	}
 });
