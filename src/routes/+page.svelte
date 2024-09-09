@@ -24,13 +24,17 @@
 	};
 </script>
 
-<section class="flex w-full justify-center flex-col items-center">
-	<form
-		on:submit|preventDefault={handleSubmit}
-		class="grid w-full max-w-sm items-center gap-3 rounded-md p-3"
-	>
-		<Label for="file-input">File Upload</Label>
-		<Input name="file" id="file-input" type="file" accept="text/csv" bind:value={fileState} />
-		<Button type="submit">Upload</Button>
-	</form>
-</section>
+<form
+	on:submit|preventDefault={handleSubmit}
+	class="grid w-full max-w-sm items-center gap-3 rounded-md p-3"
+>
+	<Label for="file-input" class="text-lg font-bold">Image Upload</Label>
+	<Input
+		name="file"
+		id="file-input"
+		type="file"
+		accept="image/jpg,image/png"
+		bind:value={fileState}
+	/>
+	<Button type="submit" disabled={!fileState}>Upload</Button>
+</form>
