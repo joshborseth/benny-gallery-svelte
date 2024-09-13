@@ -1,9 +1,10 @@
 import { sql } from 'drizzle-orm';
 import { text, integer, sqliteTable } from 'drizzle-orm/sqlite-core';
 
-export const posts = sqliteTable('posts', {
+export const image = sqliteTable('image', {
 	id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
-	text: text('text', { length: 256 }).notNull(),
+	originalImageUrl: text('originalImageUrl').notNull(),
+	convertedImageUrl: text('convertedImageUrl').notNull(),
 	createdAt: text('createdAt')
 		.default(sql`CURRENT_TIMESTAMP`)
 		.notNull(),

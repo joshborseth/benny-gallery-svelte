@@ -11,13 +11,16 @@ declare module "sst" {
       "name": string
       "type": "sst.aws.Bucket"
     }
+    "DB_KEY": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "DB_URL": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "Web": {
       "type": "sst.aws.SvelteKit"
-      "url": string
-    }
-    "WebPConverter": {
-      "name": string
-      "type": "sst.aws.Function"
       "url": string
     }
   }

@@ -1,12 +1,13 @@
 import type { Config } from 'drizzle-kit';
+import { Resource } from 'sst';
 
 export default {
-	schema: './src/lib/db/schema.ts',
-	out: './src/lib/db/migrations/',
+	schema: './server/db/schema.ts',
+	out: './server/db/migrations/',
 	driver: 'turso',
 	dialect: 'sqlite',
 	dbCredentials: {
-		//obv we are gonna swap this out for actual use
-		url: 'file:./db.sqlite'
+		url: Resource.DB_URL.value,
+		authToken: Resource.DB_KEY.value
 	}
 } satisfies Config;
